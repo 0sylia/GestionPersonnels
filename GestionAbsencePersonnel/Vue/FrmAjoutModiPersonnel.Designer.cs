@@ -1,4 +1,4 @@
-﻿namespace GestionAbsencePersonnel
+﻿namespace GestionAbsencePersonnel.Vue
 {
     partial class FrmAjoutModiPersonnel
     {
@@ -49,6 +49,7 @@
             this.btnAnnuler.TabIndex = 21;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // btnEnregistrer
             // 
@@ -59,11 +60,12 @@
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEnregistrer.UseVisualStyleBackColor = true;
+            this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
             // 
             // cboService
             // 
             this.cboService.FormattingEnabled = true;
-            this.cboService.Location = new System.Drawing.Point(568, 75);
+            this.cboService.Location = new System.Drawing.Point(586, 75);
             this.cboService.Name = "cboService";
             this.cboService.Size = new System.Drawing.Size(137, 33);
             this.cboService.TabIndex = 19;
@@ -81,6 +83,7 @@
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(223, 31);
             this.txtTel.TabIndex = 17;
+            this.txtTel.TextChanged += new System.EventHandler(this.txtTel_TextChanged);
             // 
             // txtPrenom
             // 
@@ -132,7 +135,7 @@
             this.lblNom.TabIndex = 11;
             this.lblNom.Text = "Nom :";
             // 
-            // FrmAjoutModiP
+            // FrmAjoutModiPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -148,8 +151,9 @@
             this.Controls.Add(this.lblTel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNom);
-            this.Name = "FrmAjoutModiP";
+            this.Name = "FrmAjoutModiPersonnel";
             this.Text = "FrmAjoutModiP";
+            this.Load += new System.EventHandler(this.FrmAjoutModiPersonnel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -95,7 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BddManager\BddManager.cs" />
+    <Compile Include="BddManager\BddManagerClasse.cs" />
     <Compile Include="Controller\FrmGestionAbsenceController.cs" />
     <Compile Include="Controller\FrmGestionPersonnelController.cs" />
     <Compile Include="Dal\AbsenceDal.cs" />

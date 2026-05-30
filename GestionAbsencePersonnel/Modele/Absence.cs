@@ -9,12 +9,14 @@ namespace GestionAbsencePersonnel.Modele
     /// <summary>
     /// Représente une absence avec un identifiant, une date de début, une date de fin, un motif associé et un personnel associé.
     /// </summary>
-    internal class Absence
+    public class Absence
     {
-        public int Idabsence { get; set; }
         public DateTime DateDebut { get; set; }
         public DateTime DateFin { get; set; }
-        public Motif Motif { get; set; }
-        public Personnel Personnel { get; set; }
+        public int IdMotif { get; set; }
+        public int IdPersonnel { get; set; }
+        // Pour identifier une absence unique (sans utiliser id)
+        public string IdentifiantAbsence => $"{IdPersonnel}_{DateDebut:ddMMyyyy}";
+
     }
 }

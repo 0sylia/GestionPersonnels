@@ -1,4 +1,4 @@
-﻿namespace GestionAbsencePersonnel
+﻿namespace GestionAbsencePersonnel.Vue
 {
     partial class FrmGestionAbsence
     {
@@ -38,39 +38,43 @@
             // dgvAbsences
             // 
             this.dgvAbsences.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAbsences.Location = new System.Drawing.Point(67, 46);
+            this.dgvAbsences.Location = new System.Drawing.Point(38, 26);
             this.dgvAbsences.Name = "dgvAbsences";
             this.dgvAbsences.RowHeadersWidth = 82;
             this.dgvAbsences.RowTemplate.Height = 33;
-            this.dgvAbsences.Size = new System.Drawing.Size(293, 333);
+            this.dgvAbsences.Size = new System.Drawing.Size(489, 392);
             this.dgvAbsences.TabIndex = 0;
+            this.dgvAbsences.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAbsences_CellContentClick);
             // 
             // btnAjouterAbsence
             // 
-            this.btnAjouterAbsence.Location = new System.Drawing.Point(482, 76);
+            this.btnAjouterAbsence.Location = new System.Drawing.Point(573, 78);
             this.btnAjouterAbsence.Name = "btnAjouterAbsence";
             this.btnAjouterAbsence.Size = new System.Drawing.Size(192, 62);
             this.btnAjouterAbsence.TabIndex = 1;
             this.btnAjouterAbsence.Text = "Ajouter";
             this.btnAjouterAbsence.UseVisualStyleBackColor = true;
+            this.btnAjouterAbsence.Click += new System.EventHandler(this.btnAjouterAbsence_Click);
             // 
             // btnModifierAbsence
             // 
-            this.btnModifierAbsence.Location = new System.Drawing.Point(482, 186);
+            this.btnModifierAbsence.Location = new System.Drawing.Point(573, 190);
             this.btnModifierAbsence.Name = "btnModifierAbsence";
             this.btnModifierAbsence.Size = new System.Drawing.Size(192, 62);
             this.btnModifierAbsence.TabIndex = 2;
             this.btnModifierAbsence.Text = "Modifier";
             this.btnModifierAbsence.UseVisualStyleBackColor = true;
+            this.btnModifierAbsence.Click += new System.EventHandler(this.btnModifierAbsence_Click); 
             // 
             // btnSupprimerAbsence
             // 
-            this.btnSupprimerAbsence.Location = new System.Drawing.Point(482, 297);
+            this.btnSupprimerAbsence.Location = new System.Drawing.Point(573, 300);
             this.btnSupprimerAbsence.Name = "btnSupprimerAbsence";
             this.btnSupprimerAbsence.Size = new System.Drawing.Size(192, 62);
             this.btnSupprimerAbsence.TabIndex = 3;
             this.btnSupprimerAbsence.Text = "Supprimer";
             this.btnSupprimerAbsence.UseVisualStyleBackColor = true;
+            this.btnSupprimerAbsence.Click += new System.EventHandler(this.btnSupprimerAbsence_Click);
             // 
             // FrmGestionAbsence
             // 
@@ -83,6 +87,7 @@
             this.Controls.Add(this.dgvAbsences);
             this.Name = "FrmGestionAbsence";
             this.Text = "FrmGestionAbsence";
+            this.Load += new System.EventHandler(this.FrmGestionAbsence_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAbsences)).EndInit();
             this.ResumeLayout(false);
 

@@ -9,7 +9,7 @@ namespace GestionAbsencePersonnel.Modele
     /// <summary>
     /// Représente un motif avec un identifiant et une libelle.
     /// </summary>
-    internal class Motif
+    public class Motif
     {
         public int Idmotif { get; set; }
         public string Libelle { get; set; }
